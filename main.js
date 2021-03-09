@@ -38,7 +38,7 @@ console.log(myCodeImmersivesObj);
 
 // Now add your `currentScore` and your `cumulativeScore` and put it back in `cumulativeScore`.
 
-myCodeImmersivesObj.cumulativeScore = 53;
+myCodeImmersivesObj.cumulativeScore += myCodeImmersivesObj.currentScore;
 console.log(myCodeImmersivesObj);
 
 // Now add a property called `I am exactly this cool` (you'll need bracket notation!) and set it to `soooooo cool`.
@@ -63,7 +63,7 @@ console.log(johnM);
 
 // Add a `fullName` property and set it to the name properties put together with a space string in the middle.
 
-johnM.fullName = "John Meneses";
+johnM.fullName = johnM.firstName + " " + johnM.lastName;
 console.log(johnM);
 
 // Add an `age` property and set it to a number.
@@ -78,7 +78,9 @@ console.log(johnM);
 
 // Now push three strings into that array.
 
-johnM.address = ["35-70, 76st, 13th ave"];
+johnM.address.push("hello");
+johnM.address.push("hey");
+johnM.address.push("hi");
 console.log(johnM);
 
 // Part 3 - setting key-value pairs in-line.
@@ -99,3 +101,6 @@ const newObject = {
 
 // As a stretch goal, go back pre-populate the object with at least one property using a key name that
 // CAN'T be a variable name. That would be anything with a space in it, or a dash, or starting with a number.
+
+johnM.a = ["35-70, 76st, 13th ave"];
+console.log(newObject);
