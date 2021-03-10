@@ -101,6 +101,3 @@ const newObject = {
 
 // As a stretch goal, go back pre-populate the object with at least one property using a key name that
 // CAN'T be a variable name. That would be anything with a space in it, or a dash, or starting with a number.
-
-johnM.a = ["35-70, 76st, 13th ave"];
-console.log(newObject);
