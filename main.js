@@ -9,42 +9,42 @@ const myCodeImmersivesObj = {
 // Below, set the value of property `wait` to be "I object".
 
 myCodeImmersivesObj.wait = "I object";
-console.log(myCodeImmersivesObj);
+console.log(myCodeImmersivesObj.wait);
 
 // Add the new property `isAnExcellentObject` and set it to `true`.
 
 myCodeImmersivesObj.isAnExcellentObject = true;
-console.log(myCodeImmersivesObj);
+console.log(myCodeImmersivesObj.isAnExcellentObject);
 
 // Add the property `term` and set it to 1.
 
 myCodeImmersivesObj.term = 1;
-console.log(myCodeImmersivesObj);
+console.log(myCodeImmersivesObj.term);
 
 // Now add 1 to the value of your object's `term` property and put that new value back in your object's `term`.
 
-myCodeImmersivesObj.isAnExcellentObject = true;
-console.log(myCodeImmersivesObj);
+myCodeImmersivesObj.term++;
+console.log(myCodeImmersivesObj.term);
 
 // Now add a new property called `currentScore` and set it to 3.
 
 myCodeImmersivesObj.currentScore = 3;
-console.log(myCodeImmersivesObj);
+console.log(myCodeImmersivesObj.currentScore);
 
 // Now add a new property called `cumulativeScore` and set it to 50.
 
 myCodeImmersivesObj.cumulativeScore = 50;
-console.log(myCodeImmersivesObj);
+console.log(myCodeImmersivesObj.cumulativeScore);
 
 // Now add your `currentScore` and your `cumulativeScore` and put it back in `cumulativeScore`.
 
 myCodeImmersivesObj.cumulativeScore += myCodeImmersivesObj.currentScore;
-console.log(myCodeImmersivesObj);
+console.log(myCodeImmersivesObj.cumulativeScore);
 
 // Now add a property called `I am exactly this cool` (you'll need bracket notation!) and set it to `soooooo cool`.
 
 myCodeImmersivesObj["I am exactly this cool"] = `soooooo cool`;
-console.log(myCodeImmersivesObj);
+console.log(myCodeImmersivesObj["I am exactly this cool"]);
 
 // Part 2 - your own object.
 // Now make a new EMPTY object that represents yourself. You won't put any properties in the curly braces, but just like in part 1, add them in each step below using plain JavaScript statements.
@@ -54,34 +54,37 @@ const johnM = {};
 // Add a `firstName` property and set it to a string.
 
 johnM.firstName = "John";
-console.log(johnM);
+console.log(johnM.firstName);
 
 // Add a `lastName` property and set it to a string.
 
 johnM.lastName = "Meneses";
-console.log(johnM);
+console.log(johnM.lastName);
 
 // Add a `fullName` property and set it to the name properties put together with a space string in the middle.
 
-johnM.fullName = johnM.firstName + " " + johnM.lastName;
-console.log(johnM);
+// johnM.fullName = johnM.firstName + " " + johnM.lastName;
+johnM.fullName = `${johnM.firstName} ${johnM.lastName}`;
+console.log(johnM.fullName);
 
 // Add an `age` property and set it to a number.
 
 johnM.age = "30";
-console.log(johnM);
+console.log(johnM.age);
+johnM.age = Number.MAX_SAFE_INTEGER;
+console.log(johnM.age);
 
 // Add an address property and set it to an empty array.
 
 johnM.address = [];
-console.log(johnM);
+console.log(johnM.address);
 
 // Now push three strings into that array.
 
-johnM.address.push("hello");
-johnM.address.push("hey");
-johnM.address.push("hi");
-console.log(johnM);
+johnM.address.push("52-06");
+johnM.address.push("321rd st");
+johnM.address.push("62nd ave");
+console.log(johnM.address);
 
 // Part 3 - setting key-value pairs in-line.
 // Now make a new object, but this time we'll pre-populate it, not set it in any lines below it.
@@ -97,7 +100,10 @@ const newObject = {
   numDogs: 0,
   isTeacher: false,
   friends: [1, 2, 3, 4],
+  "Nipsey Hussle": "asdl;fkja2348asdf;ij",
 };
+
+console.log(newObject);
 
 // As a stretch goal, go back pre-populate the object with at least one property using a key name that
 // CAN'T be a variable name. That would be anything with a space in it, or a dash, or starting with a number.
